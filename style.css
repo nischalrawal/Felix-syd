@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #f7f5f2;
+  --Yellow: #f4ce14;
+  --Green: #b3ffae;
+  --shadow: 5px 5px 20px black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  line-height: 2;
+  background-color: var(--primary);
+  font-family: "EB Garamond", serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.top-container {
+  height: 100%;
+  width: 100%;
+}
+.icon {
+  display: grid;
+  grid-template-columns: 3rem 4rem;
+  padding: 1rem 3rem;
+  margin-bottom: 10px;
+}
+.icon > p {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.section-first {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    "Upper-Part Upper-Part slogan"
+    "Upper-Part Upper-Part slogan ";
+}
+.Upper-Part {
+  grid-area: Upper-Part;
+  background-image: url(Images/Felix.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow);
+}
+.Upper-Part p {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: 4.5rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  font-family: "Caveat", cursive;
+  padding: 3.5rem 2rem;
+}
+.slogan {
+  grid-area: slogan;
+  box-shadow: var(--shadow);
+  background-image: url(Images/sydney.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.deal {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  float: right;
+}
+
+.section-second {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+  grid-gap: 50px;
+}
+.logo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  padding: 20px 20px;
+  max-width: auto;
+}
+
+.menu {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu .btn {
+  background-color: var(--Yellow);
+  padding: 5px 15px;
+}
+.menu .btn:hover {
+  background-color: black;
+  color: white;
+}
+.menu h3 {
+  font-weight: bolder;
+}
+.grid {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "fish leaf food salad"
+    "bread soup wine bowls ";
+}
+.fish {
+  grid-area: fish;
+}
+.leaf {
+  grid-area: leaf;
+}
+.food {
+  grid-area: food;
+}
+.salad {
+  grid-area: salad;
+}
+.soup {
+  grid-area: soup;
+}
+.wine {
+  grid-area: wine;
+}
+.bowls {
+  grid-area: bowls;
+}
+.bread {
+  grid-area: bread;
+}
+.grid img {
+  border-radius: 20px;
+}
+.pexels {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+footer {
+  background-color: #89cff3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+footer ul li {
+  list-style: none;
+}
+
+@media (max-width: 813px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  .section-first {
+    grid-template-areas:
+      "Upper-Part"
+      "slogan";
+  }
+  .slogan {
+    height: 20vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  .section-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (min-width: 700px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+}
